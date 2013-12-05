@@ -1,0 +1,7 @@
+please follow this guide
+
+mkdir ~/openwrt
+cd ~/openwrt
+git clone https://github.com/sancome/my_openwrt_mod.git
+cd ./my_openwrt_mod/trunk
+./build.sh

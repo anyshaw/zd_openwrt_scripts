@@ -2,10 +2,6 @@
 
 #apt-get install g++ libncurses5-dev zlib1g-dev bison flex unzip autoconf gawk make gettext gettext texinfo sharutils gcc binutils ncurses-term patch bzip2 libbz2-dev libz-dev asciidoc subversion sphinxsearch libtool git git-core curl
 
-#create workspace
-if [ ! -d ~/openwrt ]; then
-    mkdir ~/openwrt
-fi
 cd ~/openwrt
 
 svn checkout svn://svn.openwrt.org/openwrt/trunk trunk
@@ -16,7 +12,6 @@ git clone git://github.com/sancome/my_openwrt_mod.git
 cp ./db120-openwrt-scripts/trunk/feeds.conf ./trunk
 echo "src-git exopenwrt https://github.com/black-roland/exOpenWrt.git" >> ./trunk/feeds.conf
 echo "src-git mwan git://github.com/Adze1502/mwan.git" >> ./trunk/feeds.conf
-echo "src-git abrasive git://github.com/sancome/OpenWRT-ShairPort.git;master" >> ./trunk/feeds.conf
 ./trunk/scripts/feeds update -a
 ./trunk/scripts/feeds install -a
 
@@ -78,11 +73,16 @@ cp -rf ./my_openwrt_mod/package/cpulimit-ng ./trunk/package/
 cp -rf ./my_openwrt_mod/package/gevent ./trunk/package/
 #greenlet
 cp -rf ./my_openwrt_mod/package/greenlet ./trunk/package/
+#shairport_new
+cp -rf ./my_openwrt_mod/package/shairport_new ./trunk/package/
 
 #luci
 cp -rf ./my_openwrt_mod/luci ./trunk/feeds/
 patch -p0 ./trunk/feeds/luci/contrib/package/luci/Makefile < ./trunk/feeds/luci/contrib/package/luci/Makefile.diff
 rm ./trunk/feeds/luci/contrib/package/luci/Makefile.diff
+
+#files
+cp -rf ./my_openwrt_mod/files ./trunk/
 
 #add yaaw
 #cp -rf ./yaaw ./trunk/feeds/luci/modules/admin-core/root/www/
@@ -90,7 +90,7 @@ rm ./trunk/feeds/luci/contrib/package/luci/Makefile.diff
 #cp -rf ./webui-aria2 ./trunk/feeds/luci/modules/admin-core/root/www/
 
 #delete my_openwrt_mod
-rm -rf my_openwrt_mod
+rm -rf ./my_openwrt_mod
 
 #save dl files to dl-trunk
 if [ ! -d dl-trunk ]; then
@@ -103,10 +103,11 @@ cd trunk
 if [ ! -d dl ]; then
     ln -s ~/openwrt/dl-trunk dl
 fi
-make defconfig
-make prereq
+
+#make menuconfig
+#make defconfig
+#make menuconfig
 #cp ../db120-openwrt-scripts/trunk/config.db120 ./.config
 #cp ../db120-openwrt-scripts/trunk/config.db120.pdnsd+dnscrypt ./.config
 #cp ../db120-openwrt-scripts/trunk/config.db120.pdnsd ./.config
-#make menuconfig
 #make V=99 -j 5
