@@ -110,4 +110,4 @@ fi
 #cp ../db120-openwrt-scripts/trunk/config.db120 ./.config
 #cp ../db120-openwrt-scripts/trunk/config.db120.pdnsd+dnscrypt ./.config
 #cp ../db120-openwrt-scripts/trunk/config.db120.pdnsd ./.config
-#make V=99 -j 5
+#make V=99
