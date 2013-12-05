@@ -2,6 +2,6 @@ please follow this guide
 
 mkdir ~/openwrt
 cd ~/openwrt
-git clone https://github.com/sancome/my_openwrt_mod.git
-cd ./my_openwrt_mod/trunk
+git clone https://github.com/sancome/db120-openwrt-scripts.git
+cd ./db120-openwrt-scripts/trunk
 ./build.sh
