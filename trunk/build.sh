@@ -73,8 +73,8 @@ cp -rf ./my_openwrt_mod/package/cpulimit-ng ./trunk/package/
 cp -rf ./my_openwrt_mod/package/gevent ./trunk/package/
 #greenlet
 cp -rf ./my_openwrt_mod/package/greenlet ./trunk/package/
-#shairport_new
-cp -rf ./my_openwrt_mod/package/shairport_new ./trunk/package/
+#shairport-new
+cp -rf ./my_openwrt_mod/package/shairport-new ./trunk/package/
 
 #luci
 cp -rf ./my_openwrt_mod/luci ./trunk/feeds/
