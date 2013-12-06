@@ -104,10 +104,9 @@ if [ ! -d dl ]; then
     ln -s ~/openwrt/dl-trunk dl
 fi
 
-#make menuconfig
 #make defconfig
-#make menuconfig
 #cp ../db120-openwrt-scripts/trunk/config.db120 ./.config
 #cp ../db120-openwrt-scripts/trunk/config.db120.pdnsd+dnscrypt ./.config
 #cp ../db120-openwrt-scripts/trunk/config.db120.pdnsd ./.config
+#make menuconfig
 #make V=99
