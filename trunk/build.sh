@@ -9,7 +9,7 @@ git clone git://github.com/sancome/my_openwrt_mod.git
 #git clone git://github.com/binux/yaaw.git
 #git clone git://github.com/ziahamza/webui-aria2.git
 
-cp ./db120-openwrt-scripts/trunk/feeds.conf ./trunk/feeds.conf
+cp ./trunk/feeds.conf.default ./trunk/feeds.conf
 echo "src-git exopenwrt https://github.com/black-roland/exOpenWrt.git" >> ./trunk/feeds.conf
 echo "src-git mwan git://github.com/Adze1502/mwan.git" >> ./trunk/feeds.conf
 ./trunk/scripts/feeds update -a
