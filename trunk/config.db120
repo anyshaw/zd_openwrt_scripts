@@ -2092,7 +2092,7 @@ CONFIG_PACKAGE_libpcap=m
 # Configuration
 #
 # CONFIG_PCAP_HAS_USB is not set
-CONFIG_PACKAGE_libpcre=m
+CONFIG_PACKAGE_libpcre=y
 # CONFIG_PACKAGE_libpcrecpp is not set
 # CONFIG_PACKAGE_libpcsclite is not set
 # CONFIG_PACKAGE_libpiano is not set
@@ -2586,7 +2586,7 @@ CONFIG_PACKAGE_curl=m
 # CONFIG_PACKAGE_uucp is not set
 CONFIG_PACKAGE_vsftpd=y
 # CONFIG_PACKAGE_vsftpd-tls is not set
-CONFIG_PACKAGE_wget=m
+CONFIG_PACKAGE_wget=y
 # CONFIG_PACKAGE_wget-nossl is not set
 # CONFIG_PACKAGE_wput is not set
 # CONFIG_PACKAGE_yafc is not set
