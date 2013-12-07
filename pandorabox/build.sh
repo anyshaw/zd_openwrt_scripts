@@ -19,9 +19,9 @@ cp ./pandorabox/feeds.conf.default ./pandorabox/feeds.conf
 #RA MOD
 #package files
 #openssl
-cp -rf ./zd_openwrt_mod/package/openssl ./pandorabox/package/libs/
-patch -p0 ./pandorabox/package/libs/openssl/Makefile < ./pandorabox/package/libs/openssl/Makefile.diff
-rm ./pandorabox/package/libs/openssl/Makefile.diff
+cp -rf ./zd_openwrt_mod/package/openssl ./pandorabox/package/
+patch -p0 ./pandorabox/package/openssl/Makefile < ./pandorabox/package/openssl/Makefile.diff
+rm ./pandorabox/package/openssl/Makefile.diff
 
 #package install
 #exfat-nofuse
@@ -54,6 +54,11 @@ rm ./pandorabox/feeds/luci/contrib/package/luci/Makefile.diff
 
 #files
 cp -rf ./zd_openwrt_mod/files ./pandorabox/
+
+#copy config files to folder, it's a bug for aa and pandorabox version, not for trunk
+cp -rf ./zd_openwrt_mod/luci/applications/luci-pdnsd/root/etc ./pandorabox/files/
+cp -rf ./zd_openwrt_mod/luci/applications/luci-vsftpd/root/etc ./pandorabox/files/
+chmod 644 ./pandorabox/files/etc/pdnsd.conf
 
 #add yaaw
 #cp -rf ./yaaw ./pandorabox/feeds/luci/modules/admin-core/root/www/
