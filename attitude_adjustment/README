@@ -1,0 +1,7 @@
+please follow this guide
+
+mkdir ~/openwrt
+cd ~/openwrt
+git clone https://github.com/sancome/db120-openwrt-scripts.git
+cd ./db120-openwrt-scripts/attitude_adjustment
+./build.sh
