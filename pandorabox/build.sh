@@ -22,6 +22,10 @@ cp ./pandorabox/feeds.conf.default ./pandorabox/feeds.conf
 cp -rf ./zd_openwrt_mod/package/openssl ./pandorabox/package/
 patch -p0 ./pandorabox/package/openssl/Makefile < ./pandorabox/package/openssl/Makefile.diff
 rm ./pandorabox/package/openssl/Makefile.diff
+#switch vlan 96
+cp -rf ./zd_openwrt_mod/package/switch ./pandorabox/package/
+patch -p0 ./pandorabox/package/switch/src/switch-robo.c < ./pandorabox/package/switch/src/switch-robo.c.diff
+rm ./pandorabox/package/switch/src/switch-robo.c.diff
 
 #package install
 #exfat-nofuse
@@ -51,6 +55,9 @@ cp -rf ./zd_openwrt_mod/package/shairport-new ./pandorabox/package/
 cp -rf ./zd_openwrt_mod/luci ./pandorabox/feeds/
 patch -p0 ./pandorabox/feeds/luci/contrib/package/luci/Makefile < ./pandorabox/feeds/luci/contrib/package/luci/Makefile.diff
 rm ./pandorabox/feeds/luci/contrib/package/luci/Makefile.diff
+#luci vlan 96
+patch -p0 ./pandorabox/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_network/vlan.lua < ./pandorabox/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_network/vlan.lua.diff
+rm ./pandorabox/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_network/vlan.lua.diff
 
 #files
 cp -rf ./zd_openwrt_mod/files ./pandorabox/
