@@ -80,6 +80,14 @@ cp -rf ./my_openwrt_mod/package/shairport-new ./trunk/package/
 cp -rf ./my_openwrt_mod/luci ./trunk/feeds/
 patch -p0 ./trunk/feeds/luci/contrib/package/luci/Makefile < ./trunk/feeds/luci/contrib/package/luci/Makefile.diff
 rm ./trunk/feeds/luci/contrib/package/luci/Makefile.diff
+#luci vlan 96
+patch -p0 ./trunk/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_network/vlan.lua < ./trunk/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_network/vlan.lua.diff
+rm ./trunk/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_network/vlan.lua.diff
+
+#switch vlan 96
+cp -rf ./my_openwrt_mod/target ./trunk/
+patch -p0 ./trunk/target/linux/generic/files/drivers/net/phy/b53/b53_common.c < ./trunk/target/linux/generic/files/drivers/net/phy/b53/b53_common.c.diff
+rm ./trunk/target/linux/generic/files/drivers/net/phy/b53/b53_common.c.diff
 
 #files
 cp -rf ./my_openwrt_mod/files ./trunk/
