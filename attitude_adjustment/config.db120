@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
-# OpenWrt version: Attitude Adjustment (r38863)
-# Tue Dec 10 00:18:32 2013
+# OpenWrt version: Attitude Adjustment (r39154)
+# Fri Jan 10 23:06:53 2014
 #
 CONFIG_HAVE_DOT_CONFIG=y
 # CONFIG_TARGET_ppc40x is not set
@@ -3540,7 +3540,7 @@ CONFIG_PACKAGE_bash=y
 # CONFIG_PACKAGE_collectd is not set
 # CONFIG_PACKAGE_comgt is not set
 # CONFIG_PACKAGE_coreutils is not set
-# CONFIG_PACKAGE_cpulimit-ng is not set
+CONFIG_PACKAGE_cpulimit-ng=y
 # CONFIG_PACKAGE_cpusage is not set
 # CONFIG_PACKAGE_crypto-tools is not set
 # CONFIG_PACKAGE_cryptsetup is not set
