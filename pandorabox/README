@@ -2,6 +2,6 @@ please follow this guide
 
 mkdir ~/openwrt
 cd ~/openwrt
-git clone https://github.com/sancome/db120-openwrt-scripts.git
-cd ./db120-openwrt-scripts/pandorabox
+git clone https://github.com/sancome/zd_openwrt_scripts.git
+cd ./zd_openwrt_scripts/pandorabox
 ./build.sh

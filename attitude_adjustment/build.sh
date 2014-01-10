@@ -63,7 +63,7 @@ rm ./attitude_adjustment/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_ne
 #files
 cp -rf ./zd_openwrt_mod/files ./attitude_adjustment/
 
-#copy config files to folder, it's a bug for aa and attitude_adjustment version, not for trunk
+#copy config files to folder, it's a bug for aa and pandorabox version, not for trunk
 cp -rf ./zd_openwrt_mod/luci/applications/luci-pdnsd/root/etc ./attitude_adjustment/files/
 cp -rf ./zd_openwrt_mod/luci/applications/luci-vsftpd/root/etc ./attitude_adjustment/files/
 chmod 644 ./attitude_adjustment/files/etc/pdnsd.conf
