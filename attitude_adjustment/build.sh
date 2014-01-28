@@ -51,6 +51,8 @@ cp -rf ./zd_openwrt_mod/package/gevent ./attitude_adjustment/package/
 cp -rf ./zd_openwrt_mod/package/greenlet ./attitude_adjustment/package/
 #shairport-new
 cp -rf ./zd_openwrt_mod/package/shairport-new ./attitude_adjustment/package/
+#gmediarender
+cp -rf ./zd_openwrt_mod/package/gmediarender ./attitude_adjustment/package/
 
 #luci
 cp -rf ./zd_openwrt_mod/luci ./attitude_adjustment/feeds/
