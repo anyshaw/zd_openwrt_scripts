@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
-# OpenWrt version: Attitude Adjustment (r39154)
-# Tue Jan 28 23:02:13 2014
+# OpenWrt version: Attitude Adjustment (r39408)
+# Fri Feb  7 15:56:54 2014
 #
 CONFIG_HAVE_DOT_CONFIG=y
 # CONFIG_TARGET_ppc40x is not set
