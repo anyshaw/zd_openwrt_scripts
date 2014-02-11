@@ -4,7 +4,8 @@
 
 cd ~/openwrt
 
-svn checkout svn://svn.openwrt.org/openwrt/trunk trunk
+#svn checkout svn://svn.openwrt.org/openwrt/trunk trunk
+git clone git://git.openwrt.org/openwrt.git trunk
 git clone git://github.com/sancome/zd_openwrt_mod.git
 #git clone git://github.com/binux/yaaw.git
 #git clone git://github.com/ziahamza/webui-aria2.git

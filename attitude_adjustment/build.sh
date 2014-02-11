@@ -4,7 +4,8 @@
 
 cd ~/openwrt
 
-svn checkout svn://svn.openwrt.org/openwrt/branches/attitude_adjustment attitude_adjustment
+#svn checkout svn://svn.openwrt.org/openwrt/branches/attitude_adjustment attitude_adjustment
+git clone git://git.openwrt.org/12.09/openwrt.git attitude_adjustment
 git clone git://github.com/sancome/zd_openwrt_mod.git
 #git clone git://github.com/binux/yaaw.git
 #git clone git://github.com/ziahamza/webui-aria2.git
