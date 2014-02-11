@@ -11,6 +11,7 @@ git clone git://github.com/sancome/zd_openwrt_mod.git
 #git clone git://github.com/ziahamza/webui-aria2.git
 
 cp ./attitude_adjustment/feeds.conf.default ./attitude_adjustment/feeds.conf
+sed -i 's/.*packages_12.09.*/src-git packages git:\/\/git.openwrt.org\/12.09\/packages.git/' ./attitude_adjustment/feeds.conf
 sed -i 's/\/contrib\/package//g' ./attitude_adjustment/feeds.conf
 #echo "src-git exopenwrt https://github.com/black-roland/exOpenWrt.git" >> ./attitude_adjustment/feeds.conf
 #echo "src-git mwan git://github.com/Adze1502/mwan.git" >> ./attitude_adjustment/feeds.conf
