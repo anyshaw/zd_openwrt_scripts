@@ -78,7 +78,7 @@ if [ ! -d dl ]; then
     ln -s ~/openwrt/dl-trunk dl
 fi
 
-#make defconfig
 #cp ../zd_openwrt_scripts/trunk/config.db120 ./.config
+#make defconfig
 #make menuconfig
 #make V=99

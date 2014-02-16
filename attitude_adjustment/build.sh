@@ -25,10 +25,6 @@ sed -i 's/\/contrib\/package//g' ./attitude_adjustment/feeds.conf
 cp -rf ./zd_openwrt_mod/package/openssl ./attitude_adjustment/package/
 patch -p0 ./attitude_adjustment/package/openssl/Makefile < ./attitude_adjustment/package/openssl/Makefile.diff
 rm ./attitude_adjustment/package/openssl/Makefile.diff
-#switch vlan 96
-cp -rf ./zd_openwrt_mod/package/switch ./attitude_adjustment/package/
-patch -p0 ./attitude_adjustment/package/switch/src/switch-robo.c < ./attitude_adjustment/package/switch/src/switch-robo.c.diff
-rm ./attitude_adjustment/package/switch/src/switch-robo.c.diff
 
 #package install
 #exfat-nofuse
@@ -60,9 +56,6 @@ cp -rf ./zd_openwrt_mod/package/gmediarender ./attitude_adjustment/package/
 cp -rf ./zd_openwrt_mod/luci ./attitude_adjustment/feeds/
 patch -p0 ./attitude_adjustment/feeds/luci/contrib/package/luci/Makefile < ./attitude_adjustment/feeds/luci/contrib/package/luci/Makefile.diff
 rm ./attitude_adjustment/feeds/luci/contrib/package/luci/Makefile.diff
-#luci vlan 96
-patch -p0 ./attitude_adjustment/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_network/vlan.lua < ./attitude_adjustment/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_network/vlan.lua.diff
-rm ./attitude_adjustment/feeds/luci/modules/admin-full/luasrc/model/cbi/admin_network/vlan.lua.diff
 
 #files
 cp -rf ./zd_openwrt_mod/files ./attitude_adjustment/
@@ -92,7 +85,7 @@ if [ ! -d dl ]; then
     ln -s ~/openwrt/dl-attitude_adjustment dl
 fi
 
-#make defconfig
 #cp ../zd_openwrt_scripts/attitude_adjustment/config.db120 ./.config
+#make defconfig
 #make menuconfig
 #make V=99
