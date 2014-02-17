@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
-# OpenWrt version: Attitude Adjustment (r39408)
-# Fri Feb  7 15:56:54 2014
+# OpenWrt version: Attitude Adjustment (r39585)
+# Sun Feb 16 23:35:46 2014
 #
 CONFIG_HAVE_DOT_CONFIG=y
 # CONFIG_TARGET_ppc40x is not set
@@ -1436,7 +1436,7 @@ CONFIG_PACKAGE_luci-app-shairport=y
 # CONFIG_PACKAGE_luci-app-statistics is not set
 # CONFIG_PACKAGE_luci-app-tinyproxy is not set
 # CONFIG_PACKAGE_luci-app-transmission is not set
-# CONFIG_PACKAGE_luci-app-upnp is not set
+CONFIG_PACKAGE_luci-app-upnp=y
 # CONFIG_PACKAGE_luci-app-vnstat is not set
 # CONFIG_PACKAGE_luci-app-voice-core is not set
 CONFIG_PACKAGE_luci-app-vsftpd=y
@@ -2254,7 +2254,7 @@ CONFIG_PACKAGE_iptables-mod-nat-extra=y
 # CONFIG_PACKAGE_knock is not set
 # CONFIG_PACKAGE_knockd is not set
 # CONFIG_PACKAGE_miniupnpc is not set
-# CONFIG_PACKAGE_miniupnpd is not set
+CONFIG_PACKAGE_miniupnpd=y
 # CONFIG_PACKAGE_natpmp is not set
 # CONFIG_PACKAGE_natpmpc is not set
 # CONFIG_PACKAGE_nufw is not set
@@ -3094,7 +3094,7 @@ CONFIG_PACKAGE_libncurses=y
 # CONFIG_PACKAGE_libnetsnmp is not set
 # CONFIG_PACKAGE_libnewt is not set
 # CONFIG_PACKAGE_libnfc is not set
-# CONFIG_PACKAGE_libnfnetlink is not set
+CONFIG_PACKAGE_libnfnetlink=y
 # CONFIG_PACKAGE_libnids is not set
 # CONFIG_PACKAGE_libnl is not set
 CONFIG_PACKAGE_libnl-tiny=y
@@ -3338,7 +3338,7 @@ CONFIG_PACKAGE_gst-plugins-base=y
 # CONFIG_PACKAGE_gst-plugins-good is not set
 # CONFIG_PACKAGE_gst-plugins-ugly is not set
 CONFIG_PACKAGE_gstreamer=y
-# CONFIG_PACKAGE_gstreamer-utils is not set
+CONFIG_PACKAGE_gstreamer-utils=y
 # CONFIG_PACKAGE_hasciicam is not set
 # CONFIG_PACKAGE_icecast is not set
 # CONFIG_PACKAGE_imagemagick is not set
